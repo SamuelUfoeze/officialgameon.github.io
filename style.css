@@ -1,0 +1,421 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+}
+body {
+    overflow-x: hidden;
+    background-color: #050e01;
+    color: white;
+}
+.header {
+    position: relative;
+    background-image: url('images/AgameonHeader.png'); /* Replace with your hero image URL */
+    background-size: cover;
+    background-position: center;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    color: white;
+}
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: rgba(0, 0, 0, 0.5);
+    padding: 1rem 5%;
+    width: 100%;
+}
+.logo {
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+.nav-menu {
+    display: flex;
+    gap: 1rem;
+}
+.nav-menu a {
+    color: white;
+    text-decoration: none;
+    padding: 0.5rem 1rem;
+    transition: background 0.3s;
+}
+.nav-menu a:hover {
+    background: rgba(255, 255, 255, 0.2);
+    border-radius: 5px;
+}
+.hero-text {
+    text-align: center;
+    margin: auto;
+    max-width: 80%;
+}
+.hero-text h1 {
+    font-size: 3rem;
+    margin-bottom: 1rem;
+}
+.hero-text p {
+    font-size: 1.2rem;
+    margin-bottom: 2rem;
+}
+.hero-text button {
+    background: green;
+    color: white;
+    border: none;
+    padding: 1rem 2rem;
+    font-size: 1rem;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background 0.3s;
+}
+.hero-text button:hover {
+    background: darkgreen;
+}
+@media (max-width: 768px) {
+    nav {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+    .nav-menu {
+        flex-direction: column;
+        width: 100%;
+    }
+    .nav-menu a {
+        width: 100%;
+        text-align: center;
+        padding: 1rem 0;
+    }
+    .hero-text h1 {
+        font-size: 2rem;
+    }
+    .hero-text p {
+        font-size: 1rem;
+    }
+    .hero-text button {
+        padding: 0.8rem 1.5rem;
+        font-size: 0.9rem;
+    }
+}
+
+
+/*-----------------------------SECTION 2 ABOUT US---------------------------------*/
+.container {
+    display: flex;
+    flex-wrap: wrap;
+    padding: 20px;
+}
+.image-column, .text-column {
+    flex: 1;
+    min-width: 300px; /* ensures it doesn’t get too small on narrow screens */
+    box-sizing: border-box;
+}
+.image-column img {
+    width: 100%;
+    height: auto;
+    display: block;
+    border-radius: 15px;
+}
+.text-column {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 20px;
+}
+.text-column p {
+    margin: 0 0 1em 0;
+}
+.text-column .learn-more-btn {
+    padding: 10px 20px;
+    background-color: rgb(5, 128, 25);
+    color: white;
+    text-decoration: none;
+    border: none;
+    border-radius: 5px;
+    text-align: center;
+    cursor: pointer;
+    align-self: start; /* aligns the button to the start of the flex container */
+}
+@media (max-width: 768px) {
+    .container {
+        flex-direction: column;
+        padding: 10px;
+    }
+}
+
+.facilities h2{
+    margin-bottom: 3%;
+    text-align: center;
+    font-size: 40px;
+    font-weight: 600px;
+}
+.facilities {
+    /*padding: 2rem 5%;*/
+    padding: 7% 1%;
+    /*background-image:linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)), url("images/astroTurfPitch.jpg");
+    background-repeat: no-repeat;
+    background-size:cover ;*/
+    background-color: #050e01;
+    text-align: center;
+    font-size: 80%;
+    font-weight: 600;
+}
+.grid2-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    position: relative;
+    left: 5%;
+    right: 5%;
+    grid-gap: 10px;
+    width: 90%;
+    max-width: 1200px;
+}
+
+.grid2-item {
+    position: relative;
+    width: 100%;
+    padding-bottom: 100%; /* Maintain aspect ratio 1:1 */
+    background-size: cover;
+    background-position: center;
+    border-radius: 10px;
+}
+
+.grid2-item:nth-child(1) { background-image: url('images/fruitbar.png'); }
+.grid2-item:nth-child(2) { background-image: url('images/astroTurf.jpg'); }
+.grid2-item:nth-child(3) { background-image: url('images/Man\ in\ gym\ -\ 960x1440\ \(2\).jpg'); }
+.grid2-item:nth-child(4) { background-image: url('images/snokergameon.png'); }
+.grid2-item:nth-child(5) { background-image: url('images/tabletennisgameon.png'); }
+.grid2-item:nth-child(6) { background-image: url('images/gamecenter.png'); }
+.grid2-item:nth-child(7) { background-image: url('images/gameoncup.jpg'); }
+.grid2-item:nth-child(8) { background-image: url('images/vr.jpg'); }
+.grid2-item:nth-child(9) { background-image: url('images/psgame.jpg'); }
+
+.overlay {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    padding: 10px;
+    background: rgba(0, 0, 0, 0.5);
+    color: #fff;
+    text-align: center;
+}
+
+.request-session{
+    background-image: linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)), url("images/astroTurf.jpg");
+    background-size: cover;
+    height: 100vh;
+    width: 100%;
+    background-repeat: none;
+
+}
+.section_text_area{
+    position: relative;
+    top: 50%;
+    align-items: center;
+    text-align: center;
+}
+.request-session button{
+    background-color: green;
+    color: white;
+    padding: 1% 2%;
+    border: none;
+    border-radius: 20px;
+}
+
+
+
+/*------------------------------------SECTION 3 ----------------------------------*/
+.grid-section {
+    padding: 2rem 5%;
+    background-image:linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)), url("images/astroT.jpg");
+    background-repeat: no-repeat;
+    background-size:cover ;
+    /*background-color: #050e01;*/
+    text-align: center;
+}
+.grid-section h2 {
+    margin-bottom: 2rem;
+    font-size: 2rem;
+    color: white;
+}
+.grid {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 1rem;
+}
+.grid-item {
+    background: rgba(0, 0, 0, 0.7);
+    padding: 2rem;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    flex: 1 1 calc(33.333% - 2rem);
+    max-width: calc(33.333% - 2rem);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.grid-item i {
+    font-size: 3rem;
+    color: green;
+    margin-bottom: 1rem;
+}
+.grid-item h3 {
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+    color:white;
+}
+.grid-item p {
+    font-size: 1rem;
+    color:white;
+}
+@media (max-width: 768px) {
+    .grid-item {
+        flex: 1 1 calc(50% - 2rem);
+        max-width: calc(50% - 2rem);
+    }
+}
+@media (max-width: 480px) {
+    .grid-item {
+        flex: 1 1 100%;
+        max-width: 100%;
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.three-column-section {
+    display: flex;
+    flex-wrap: wrap;
+    padding: 2rem 5%;
+}
+.column {
+    flex: 1;
+    margin: 1rem;
+    padding: 1rem;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    border-radius: 15px;
+}
+.column img {
+    width: 100%;
+    height: auto;
+    border-radius: 15px;
+}
+.column.text-background {
+    background-image: url('images/group-cheerful-african-friends-with-facemasks-taking-selfie-park.jpg'); /* Replace with your background image URL */
+    background-size: cover;
+    background-position: center;
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+.column.text-background p {
+    background: rgba(0, 0, 0, 0.5);
+    padding: 1rem;
+    border-radius: 10px;
+}
+.column.text-image {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+.column.text-image .text {
+    margin-bottom: 1rem;
+}
+@media (max-width: 768px) {
+    .three-column-section {
+        flex-direction: column;
+        padding: 1rem;
+    }
+    .column {
+        margin: 1rem 0;
+    }
+}
+
+
+
+
+/*-------------------------------FOOTER SECTION ---------------------------------*/
+.footer {
+    background-color: rgb(6, 33, 2);
+    color: white;
+    text-align: center;
+    padding: 20px 0;
+}
+
+.footer-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.footer-logo img {
+    width: 80px;
+    margin-bottom: 15px;
+}
+
+.footer-links {
+    display: flex;
+    gap: 15px;
+    margin-bottom: 15px;
+}
+
+.footer-links a {
+    color: white;
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+.footer-links a:hover {
+    color: #ddd;
+}
+
+.footer-social {
+    display: flex;
+    gap: 15px;
+    margin-bottom: 15px;
+}
+
+.footer-social a img {
+    width: 24px;
+    transition: opacity 0.3s;
+}
+
+.footer-social a img:hover {
+    opacity: 0.7;
+}
+
+.footer-bottom {
+    font-size: 0.9em;
+}
+
+@media (max-width: 768px) {
+    .footer-links, .footer-social {
+        flex-direction: column;
+    }
+}

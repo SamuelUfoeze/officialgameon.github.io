@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Responsive Three Column Section</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+        body {
+            overflow-x: hidden;
+        }
+        .header {
+            position: relative;
+            background-image: url('https://via.placeholder.com/1920x1080'); /* Replace with your hero image URL */
+            background-size: cover;
+            background-position: center;
+            height: 100vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            color: white;
+        }
+        nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            background: rgba(0, 0, 0, 0.5);
+            padding: 1rem 5%;
+            width: 100%;
+        }
+        .logo {
+            font-size: 1.5rem;
+            font-weight: bold;
+        }
+        .nav-menu {
+            display: flex;
+            gap: 1rem;
+        }
+        .nav-menu a {
+            color: white;
+            text-decoration: none;
+            padding: 0.5rem 1rem;
+            transition: background 0.3s;
+        }
+        .nav-menu a:hover {
+            background: rgba(255, 255, 255, 0.2);
+            border-radius: 5px;
+        }
+        .hero-text {
+            text-align: center;
+            margin: auto;
+            max-width: 80%;
+        }
+        .hero-text h1 {
+            font-size: 3rem;
+            margin-bottom: 1rem;
+        }
+        .hero-text p {
+            font-size: 1.2rem;
+            margin-bottom: 2rem;
+        }
+        .hero-text button {
+            background: green;
+            color: white;
+            border: none;
+            padding: 1rem 2rem;
+            font-size: 1rem;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background 0.3s;
+        }
+        .hero-text button:hover {
+            background: darkgreen;
+        }
+        @media (max-width: 768px) {
+            nav {
+                flex-direction: column;
+                align-items: flex-start;
+            }
+            .nav-menu {
+                flex-direction: column;
+                width: 100%;
+            }
+            .nav-menu a {
+                width: 100%;
+                text-align: center;
+                padding: 1rem 0;
+            }
+            .hero-text h1 {
+                font-size: 2rem;
+            }
+            .hero-text p {
+                font-size: 1rem;
+            }
+            .hero-text button {
+                padding: 0.8rem 1.5rem;
+                font-size: 0.9rem;
+            }
+        }
+        .three-column-section {
+            display: flex;
+            flex-wrap: wrap;
+            padding: 2rem 5%;
+        }
+        .column {
+            flex: 1;
+            margin: 1rem;
+            padding: 1rem;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        .column img {
+            width: 100%;
+            height: auto;
+        }
+        .column.text-background {
+            background-image: url('https://via.placeholder.com/600x800'); /* Replace with your background image URL */
+            background-size: cover;
+            background-position: center;
+            color: white;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+        }
+        .column.text-background p {
+            background: rgba(0, 0, 0, 0.5);
+            padding: 1rem;
+            border-radius: 10px;
+        }
+        .column.text-image {
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+        }
+        .column.text-image .text {
+            margin-bottom: 1rem;
+        }
+        @media (max-width: 768px) {
+            .three-column-section {
+                flex-direction: column;
+                padding: 1rem;
+            }
+            .column {
+                margin: 1rem 0;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header class="header">
+        <nav>
+            <div class="logo">GAME ON</div>
+            <div class="nav-menu">
+                <a href="#">Home</a>
+                <a href="#">About</a>
+                <a href="#">Contact</a>
+                <a href="#">Game-On</a>
+            </div>
+        </nav>
+        <div class="hero-text">
+            <h1>Welcome to GAME ON</h1>
+            <p>Your ultimate destination for sports and entertainment</p>
+            <button>Learn More</button>
+        </div>
+    </header>
+    <section class="three-column-section">
+        <div class="column">
+            <img src="https://via.placeholder.com/600x800" alt="Image Column"> <!-- Replace with your image URL -->
+        </div>
+        <div class="column text-background">
+            <p>Our passion for sports drives us to bring you the best content and experiences.</p>
+        </div>
+        <div class="column text-image">
+            <div class="text">
+                <h2>Explore More</h2>
+                <p>Dive deep into the world of sports with our extensive articles and features.</p>
+            </div>
+            <img src="https://via.placeholder.com/600x400" alt="Text and Image Column"> <!-- Replace with your image URL -->
+        </div>
+    </section>
+</body>
+</html>

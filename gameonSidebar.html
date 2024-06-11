@@ -1,0 +1,178 @@
+
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Game On Vision</title>
+    
+</head>
+<style>
+    body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    overflow-x: hidden; /* Prevent horizontal scroll */
+}
+
+.header {
+    position: relative;
+    background-image: url('images/gameoncup.jpg'); /* Replace with your hero image URL */
+    background-size: cover;
+    background-position: center;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    color: white;
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: rgba(0, 0, 0, 0.5);
+    padding: 1rem 5%;
+    width: 100%;
+}
+
+.logo {
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+
+.hamburger-menu {
+    display: none;
+    font-size: 2rem;
+    cursor: pointer;
+    color: white;
+}
+
+.nav-menu {
+    display: flex;
+    gap: 1rem;
+}
+
+.nav-menu a {
+    color: white;
+    text-decoration: none;
+    padding: 0.5rem 1rem;
+    transition: background 0.3s;
+}
+
+.nav-menu a:hover {
+    background: rgba(255, 255, 255, 0.2);
+    border-radius: 5px;
+}
+
+.hero-text {
+    text-align: center;
+    margin: auto;
+    max-width: 80%;
+}
+
+.hero-text h1 {
+    font-size: 3rem;
+    margin-bottom: 1rem;
+}
+
+.hero-text p {
+    font-size: 1.2rem;
+    margin-bottom: 2rem;
+}
+
+.hero-text button {
+    background: green;
+    color: white;
+    border: none;
+    padding: 1rem 2rem;
+    font-size: 1rem;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background 0.3s;
+}
+
+.hero-text button:hover {
+    background: darkgreen;
+}
+
+@media (max-width: 768px) {
+    nav {
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    .hamburger-menu {
+        display: block;
+    }
+
+    .nav-menu {
+        display: none;
+        flex-direction: column;
+        width: 100%;
+        background: rgba(0, 0, 0, 0.9);
+        position: absolute;
+        top: 100%;
+        left: 0;
+        z-index: 1000;
+    }
+
+    .nav-menu a {
+        width: 100%;
+        text-align: center;
+        padding: 1rem 0;
+    }
+
+    .hero-text h1 {
+        font-size: 2rem;
+    }
+
+    .hero-text p {
+        font-size: 1rem;
+    }
+
+    .hero-text button {
+        padding: 0.8rem 1.5rem;
+        font-size: 0.9rem;
+    }
+}
+
+</style>
+<body>
+    <header class="header">
+        <nav>
+            <div class="logo">
+                <img src="images/Game On Realty without bg.png" width="80px" alt="Game On Logo">
+            </div>
+            <div class="hamburger-menu" id="hamburger-menu">
+                &#9776;
+            </div>
+            <div class="nav-menu" id="nav-menu">
+                <a href="#">Home</a>
+                <a href="#">About</a>
+                <a href="BookVenue.html">Book Venue</a>
+                <a href="BecomeAPartner.html">Become A Partner</a>
+                <a href="#">Contact</a>
+            </div>
+        </nav>
+        <div class="hero-text">
+            <h1>Welcome to GAME ON</h1>
+            <p>Your ultimate destination for sports and entertainment</p>
+            <button>Learn More</button>
+        </div>
+    </header>
+
+    <script>
+        document.getElementById('hamburger-menu').addEventListener('click', function() {
+            var navMenu = document.getElementById('nav-menu');
+            if (navMenu.style.display === 'block') {
+                navMenu.style.display = 'none';
+            } else {
+                navMenu.style.display = 'block';
+            }
+        });
+    </script>
+</body>
+</html>

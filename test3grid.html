@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Image Grid</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #f0f0f0;
+}
+
+.grid-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 10px;
+    width: 90%;
+    max-width: 1200px;
+}
+
+.grid-item {
+    position: relative;
+    width: 100%;
+    padding-bottom: 100%; /* Maintain aspect ratio 1:1 */
+    background-size: cover;
+    background-position: center;
+}
+
+.grid-item:nth-child(1) { background-image: url('images/drugs.jpg'); }
+.grid-item:nth-child(2) { background-image: url('images/tech.jpg'); }
+.grid-item:nth-child(3) { background-image: url('images/job.jpg'); }
+.grid-item:nth-child(4) { background-image: url('images/brand-branding-advertising-commercial-marketing-concept.jpg'); }
+.grid-item:nth-child(5) { background-image: url('images/engagement.jpg'); }
+.grid-item:nth-child(6) { background-image: url('images/community.jpg'); }
+.grid-item:nth-child(7) { background-image: url('images/astroTurf.jpg'); }
+.grid-item:nth-child(8) { background-image: url('images/inclusion.jpg'); }
+.grid-item:nth-child(9) { background-image: url('images/astroRTURF.jpg'); }
+
+.overlay {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    padding: 10px;
+    background: rgba(0, 0, 0, 0.5);
+    color: #fff;
+    text-align: center;
+}
+
+    </style>
+</head>
+<body>
+    <div class="grid-container">
+        <div class="grid-item">
+            <div class="overlay">Curb Drug Abuse</div>
+        </div>
+        <div class="grid-item">
+            <div class="overlay">Technology Integration</div>
+        </div>
+        <div class="grid-item">
+            <div class="overlay">Job Creation</div>
+        </div>
+        <div class="grid-item">
+            <div class="overlay">Strong Brand Identity</div>
+        </div>
+        <div class="grid-item">
+            <div class="overlay">Youth Engagement</div>
+        </div>
+        <div class="grid-item">
+            <div class="overlay">Community Building</div>
+        </div>
+        <div class="grid-item">
+            <div class="overlay">Unique Facility</div>
+        </div>
+        <div class="grid-item">
+            <div class="overlay">Accesibility And Inclusion</div>
+        </div>
+        <div class="grid-item">
+            <div class="overlay">Talent Sourcing</div>
+        </div>
+    </div>
+</body>
+</html>

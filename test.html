@@ -1,0 +1,335 @@
+<!-------------------------
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Two Column Section</title>
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+        }
+        .container {
+            display: flex;
+            flex-wrap: wrap;
+            padding: 20px;
+        }
+        .image-column, .text-column {
+            flex: 1;
+            min-width: 300px; /* ensures it doesn’t get too small on narrow screens */
+            box-sizing: border-box;
+        }
+        .image-column img {
+            width: 100%;
+            height: auto;
+            display: block;
+        }
+        .text-column {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            padding: 20px;
+        }
+        .text-column p {
+            margin: 0 0 1em 0;
+        }
+        .text-column .learn-more-btn {
+            padding: 10px 20px;
+            background-color: #007BFF;
+            color: white;
+            text-decoration: none;
+            border: none;
+            border-radius: 5px;
+            text-align: center;
+            cursor: pointer;
+            align-self: start; /* aligns the button to the start of the flex container */
+        }
+        @media (max-width: 768px) {
+            .container {
+                flex-direction: column;
+                padding: 10px;
+            }
+        }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <div class="image-column">
+        <img src="https://via.placeholder.com/600x400" alt="Placeholder Image">
+    </div>
+    <div class="text-column">
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque vel tortor eget lacus feugiat luctus ac a felis.</p>
+        <p>Mauris at nibh ut ipsum tempor suscipit. Integer at orci in urna vestibulum dapibus et eget libero.</p>
+        <button class="learn-more-btn">Learn More</button>
+    </div>
+</div>
+
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Booking Form</title>
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+        }
+        .form-container {
+            max-width: 600px;
+            margin: 20px auto;
+            padding: 20px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            background-color: #f9f9f9;
+        }
+        .form-group {
+            margin-bottom: 15px;
+        }
+        .form-group label {
+            display: block;
+            margin-bottom: 5px;
+        }
+        .form-group input, .form-group select {
+            width: 100%;
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            box-sizing: border-box;
+        }
+        .form-group button {
+            padding: 10px 20px;
+            background-color: #007BFF;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        .form-group button:hover {
+            background-color: #0056b3;
+        }
+        @media (max-width: 600px) {
+            .form-container {
+                padding: 10px;
+            }
+        }
+    </style>
+</head>
+<body>
+
+<div class="form-container">
+    <form>
+        <div class="form-group">
+            <label for="name">Name</label>
+            <input type="text" id="name" name="name" required>
+        </div>
+        <div class="form-group">
+            <label for="date">Date</label>
+            <input type="date" id="date" name="date" required>
+        </div>
+        <div class="form-group">
+            <label for="time">Time</label>
+            <input type="time" id="time" name="time" required>
+        </div>
+        <div class="form-group">
+            <label for="participants">Expected Number of Participants</label>
+            <input type="number" id="participants" name="participants" required>
+        </div>
+        <div class="form-group">
+            <label for="activity">Nature of Activities</label>
+            <select id="activity" name="activity" required>
+                <option value="group-sport">Group Sport</option>
+                <option value="competition-tournament">Competition/Tournament</option>
+                <option value="fitness-activity">Fitness Activity</option>
+                <option value="hangout-meetup">Hangout and Meetup</option>
+            </select>
+        </div>
+        <div class="form-group">
+            <button type="submit">Book Now</button>
+        </div>
+    </form>
+</div>
+
+</body>
+</html>
+
+
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Game On Vision</title>
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background-color: #f0f0f0;
+            color: #333;
+        }
+        .game-on-section {
+            display: flex;
+            flex-wrap: wrap;
+            padding: 40px 20px;
+            background: url('https://via.placeholder.com/1920x1080') no-repeat center center;
+            background-size: cover;
+            color: white;
+        }
+        .game-on-content {
+            background: rgba(0, 0, 0, 0.7);
+            padding: 30px;
+            border-radius: 10px;
+            flex: 1;
+            min-width: 300px;
+            max-width: 600px;
+            margin: auto;
+        }
+        .game-on-content h2 {
+            font-size: 2.5em;
+            margin-bottom: 20px;
+        }
+        .game-on-content p {
+            font-size: 1.2em;
+            line-height: 1.6;
+            margin-bottom: 20px;
+        }
+        .learn-more-btn, .contact-btn {
+            padding: 15px 25px;
+            background-color: #007BFF;
+            color: white;
+            text-decoration: none;
+            border: none;
+            border-radius: 5px;
+            font-size: 1.2em;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+            display: inline-block;
+            margin-top: 10px;
+        }
+        .learn-more-btn:hover, .contact-btn:hover {
+            background-color: #0056b3;
+        }
+        .contact-form {
+            margin-top: 30px;
+        }
+        .form-group {
+            margin-bottom: 15px;
+        }
+        .form-group label {
+            display: block;
+            margin-bottom: 5px;
+            color: #fff;
+        }
+        .form-group input, .form-group select, .form-group textarea {
+            width: 100%;
+            padding: 10px;
+            border: 1px solid rgba(255, 255, 255, 0.3);
+            border-radius: 5px;
+            box-sizing: border-box;
+            background: rgba(255, 255, 255, 0.2);
+            color: #fff;
+        }
+        .form-group textarea {
+            resize: vertical;
+            min-height: 100px;
+        }
+        @media (max-width: 768px) {
+            .game-on-content {
+                padding: 20px;
+            }
+            .game-on-content h2 {
+                font-size: 2em;
+            }
+            .game-on-content p {
+                font-size: 1em;
+            }
+            .learn-more-btn, .contact-btn {
+                padding: 10px 20px;
+                font-size: 1em;
+            }
+        }
+    </style>
+</head>
+<body>
+
+<section class="game-on-section">
+    <div class="game-on-content">
+        <h2>Join the Game On Vision</h2>
+        <p>Become a part of the Game On Vision and own state-of-the-art sports facilities. Our stadiums are not just venues for sports, but prime commercial real estate investments that offer substantial earning potential.</p>
+        <p>By investing in Game On facilities, you can take advantage of the booming sports industry. Earn from events, rentals, and various commercial activities held at these venues. Secure your future and be a part of the sports revolution today!</p>
+        <button class="learn-more-btn">Learn More</button>
+
+        <div class="contact-form">
+            <h2>Contact Us</h2>
+            <form>
+                <div class="form-group">
+                    <label for="name">Name</label>
+                    <input type="text" id="name" name="name" placeholder="Your Name" required>
+                </div>
+                <div class="form-group">
+                    <label for="contact">Contact Number</label>
+                    <input type="text" id="contact" name="contact" placeholder="Your Contact Number" required>
+                </div>
+                <div class="form-group">
+                    <label for="interest">Your Interest in Game On Facilities</label>
+                    <select id="interest" name="interest" required>
+                        <option value="ownership">Ownership</option>
+                        <option value="investment">Investment</option>
+                        <option value="partnership">Partnership</option>
+                        <option value="other">Other</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label for="email">Email</label>
+                    <input type="email" id="email" name="email" placeholder="Your Email" required>
+                </div>
+                <div class="form-group">
+                    <label for="message">Message</label>
+                    <textarea id="message" name="message" placeholder="Your Message" required></textarea>
+                </div>
+                <button type="submit" class="contact-btn">Get a Quote</button>
+            </form>
+        </div>
+    </div>
+</section>
+
+</body>
+</html>
+
+
+
+
+-------------------------------------------->
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
