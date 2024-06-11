@@ -180,15 +180,12 @@ nav {
     border-radius: 10px;
 }
 
-.grid2-item:nth-child(1) { background-image: url('images/fruitbar.png'); }
-.grid2-item:nth-child(2) { background-image: url('images/astroTurf.jpg'); }
-.grid2-item:nth-child(3) { background-image: url('images/Man\ in\ gym\ -\ 960x1440\ \(2\).jpg'); }
-.grid2-item:nth-child(4) { background-image: url('images/snokergameon.png'); }
-.grid2-item:nth-child(5) { background-image: url('images/tabletennisgameon.png'); }
-.grid2-item:nth-child(6) { background-image: url('images/gamecenter.png'); }
-.grid2-item:nth-child(7) { background-image: url('images/gameoncup.jpg'); }
-.grid2-item:nth-child(8) { background-image: url('images/vr.jpg'); }
-.grid2-item:nth-child(9) { background-image: url('images/psgame.jpg'); }
+.grid2-item:nth-child(1) { background-image: url('images/astroTurf.jpg'); }
+.grid2-item:nth-child(2) { background-image: url('images/gameoneventcenter.jpeg'); }
+.grid2-item:nth-child(3) { background-image: url('images/gamecenter.png'); }
+.grid2-item:nth-child(4) { background-image: url('images/fruitbar.png'); }
+.grid2-item:nth-child(5) { background-image: url('images/snokergameon.png'); }
+.grid2-item:nth-child(6) { background-image: url('images/tabletennisgameon.png'); }
 
 .overlay {
     position: absolute;
